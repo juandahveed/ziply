@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ config('app.locale') }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Homepage</title>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+
+        <a href="/tasks">Click here to see all the tasks</a>
+
+    </body>
+</html>
