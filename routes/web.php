@@ -17,6 +17,9 @@ Route::get('/', 'UsersController@login');
 //============== CHECK FOR SUCCESSFUL LOGIN AND REDIRECT ================
 Route::post('/login', 'UsersController@authenticate');
 
+//============== LOGOUT PAGE ================
+Route::get('/logout', 'UsersController@logout');
+
 //============= DASHBOARD ============
 //Route::get('/dashboard', function(){
 //    return view('dashboard.dashboard');

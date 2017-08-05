@@ -28,6 +28,7 @@ class UsersController extends Controller {
             $userObj->isLoggedIn = true;
             $userObj->save();
             setcookie('user_id', $userObj->id);
+            setcookie('user_name', $userObj->first_name . ' ' . $userObj->last_name);
 //            return view('dashboard.dashboard', compact('userObj'));
             return redirect()->action('UsersController@getUser');
             
@@ -43,6 +44,16 @@ class UsersController extends Controller {
 
         $userObj = User::find($_COOKIE['user_id']);
         return view('dashboard.dashboard', compact('userObj'));
+    }
+    
+    public function logout(){
+        $userObj = User::where('id', '=', $_COOKIE['user_id'])->first();
+        if ($userObj) {
+
+            $userObj->isLoggedIn = false;
+            $userObj->save();
+        }
+        return view('pages.logout');
     }
 
 }

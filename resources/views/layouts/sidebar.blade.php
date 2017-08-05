@@ -1,31 +1,21 @@
- <div class="col-sm-3 offset-sm-1 blog-sidebar">
-                    <div class="sidebar-module sidebar-module-inset">
-                        <h4>About</h4>
-                        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+ <div class="col-sm-4 blog-sidebar">
+                    <div class="sidebar-module sidebar-user">
+      
+                            <img style="max-width:200px;" src="https://static1.squarespace.com/static/52d767c2e4b0085bee1818eb/t/5836138915d5db57b19690a8/1479938959225/" />
+                         
+                            <h3>{{ $userArray[2] . ' ' . $userArray[3] }}</h3>
+                            <p>{{ $userArray[5] }}</p>
+                            {{ $userArray[6] }}
+                            
                     </div>
-                    <div class="sidebar-module">
+                    <div class="sidebar-nav">
                         <h4>Archives</h4>
                         <ol class="list-unstyled">
-                            <li><a href="#">March 2014</a></li>
-                            <li><a href="#">February 2014</a></li>
-                            <li><a href="#">January 2014</a></li>
-                            <li><a href="#">December 2013</a></li>
-                            <li><a href="#">November 2013</a></li>
-                            <li><a href="#">October 2013</a></li>
-                            <li><a href="#">September 2013</a></li>
-                            <li><a href="#">August 2013</a></li>
-                            <li><a href="#">July 2013</a></li>
-                            <li><a href="#">June 2013</a></li>
-                            <li><a href="#">May 2013</a></li>
-                            <li><a href="#">April 2013</a></li>
-                        </ol>
-                    </div>
-                    <div class="sidebar-module">
-                        <h4>Elsewhere</h4>
-                        <ol class="list-unstyled">
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Check In</a></li>
+                            <li><a href="#">Staff</a></li>
+                            <li><a href="#">Children</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Rooms</a></li>
                         </ol>
                     </div>
                 </div><!-- /.blog-sidebar -->

@@ -18,17 +18,13 @@
         
         @include('layouts.nav')
 
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
 
-                @yield('content')
-
-
-
-
-
                 @include('layouts.sidebar')
+                
+                @yield('content')
                 
             </div>
             

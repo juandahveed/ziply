@@ -9,15 +9,13 @@
     
     @if ( isset($userObj) )
 
-        {{ $userObj }}
+        {{-- $userObj --}}
 
-        <h3>{{ $userObj->first_name }}, You have logged in successfully!</h3>
+        <!--<h3>{{ $userObj->first_name }}, You have logged in successfully!</h3>-->
 
     @else
 
         <h3>Welcome Back!!</h3>
-        
-        {{ $_COOKIE['user_id'] }}
 
     @endif
 
