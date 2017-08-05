@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use App\User;
 
 class UserComposer {
-    
-public $userArray = [];
+
+    public $userArray = [];
 
     /**
      * Create a user composer.
@@ -16,11 +16,11 @@ public $userArray = [];
      * @return void
      */
     public function __construct() {
-        
-        $userObj = User::where('id', '=', $_COOKIE['user_id'])->first();
-        
-        if ($userObj) {
-            $this->userArray = [
+        if (isset($_COOKIE['user_id'])) {
+            $userObj = User::where('id', '=', $_COOKIE['user_id'])->first();
+
+            if ($userObj) {
+                $this->userArray = [
                     $userObj->id,
                     $userObj->group_id,
                     $userObj->first_name,
@@ -28,10 +28,9 @@ public $userArray = [];
                     $userObj->email,
                     $userObj->bio,
                     $userObj->image,
-            ];
+                ];
+            }
         }
-        
-    
     }
 
     /**
