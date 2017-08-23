@@ -15,6 +15,7 @@ class ChildrenController extends Controller {
     }
 
     public function createChild(Request $request) {
+//        we need to handle the room_id, birthday, and barcode
         $child = new Children;
 
         $child->first_name = $request->first_name;
@@ -25,11 +26,15 @@ class ChildrenController extends Controller {
         $child->city = $request->city;
         $child->state = $request->state;
         $child->zip = $request->zip;
-        $child->room_id = $request->room_id;
-        
-        dd($child);
+        $child->room_id = '1';
+        $child->barcode = '1234567890';
         
         $child->save();
+        return redirect('dashboard');
+    }
+    
+    public function updateChild(Request $request) {
+        dd($request);
     }
 
 }

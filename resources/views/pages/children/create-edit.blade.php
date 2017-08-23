@@ -5,7 +5,7 @@
 
     <h1>Create or Edit a Child</h1>
 
-    <form method="POST" action="/children/create-edit">
+    <form method="POST" action="">
           {{ csrf_field() }}
         <div class="form-group row">
             <label for="first_name" class="col-sm-2 col-form-label">First Name</label>

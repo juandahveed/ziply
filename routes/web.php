@@ -53,9 +53,7 @@ Route::get('/children/create-edit/{child_id?}', function($child_id = null) {
 });
 
 Route::post('/children/create-edit', 'ChildrenController@createChild');
-    // if ID ChildrenController->updateChild()
-    // ! if ID ChildrenController->createChild()
- 
+Route::post('/children/create-edit/{child_id}', 'ChildrenController@updateChild');
 
 //============= SERVICES ============
 Route::get('/services', 'ServicesController@getServices');

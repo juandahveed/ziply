@@ -9,7 +9,7 @@
         
         @foreach ( $children as $child )
         
-        <li> {{ $child->first_name }} </li>
+        <li> [{{ $child->id }}] {{ $child->first_name }} </li>
         
         @endforeach
         
